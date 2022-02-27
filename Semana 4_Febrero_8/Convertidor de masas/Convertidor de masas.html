@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Convertidor de Masas</title>
+    </head>
+    <body>
+        <!-- Titulo -->
+        <h2 style=>Convertidor de Masas</h2>
+        <p>Ingrese el valor en libras :</p>
+  
+        <p>
+            <!-- Campo de entrada -->
+            <label>Libras</label>
+            <!-- Acá ingresaremos los datos -->
+            <input id="Libras" 
+                   type="number" 
+                   placeholder="Libras" 
+                   oninput="ConvertidorDeMasas(this.value)" 
+                   onchange="ConvertidorDeMasas(this.value)" />
+        </p>
+        <!-- Unidades a convertir-->
+        <p>Kilogramo: <span id="Kilogramo"></span></p>
+        <p>Onzas: <span id="Onzas"></span></p>
+        <p>Gramos: <span id="Gramos"></span></p>
+  
+        <script>
+     //Funciones para obtener resultados
+            function ConvertidorDeMasas(value) {
+                document.getElementById("Kilogramo").innerHTML =
+                  value * 0.453592;
+                document.getElementById("Onzas").innerHTML =
+                  value * 16;
+                document.getElementById("Gramos").innerHTML =
+                  value * 453.592;
+            }
+        </script>
+    </body>
+</html>

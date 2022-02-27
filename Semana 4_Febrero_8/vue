@@ -1,0 +1,8 @@
+Vue.component('example',{
+    data:function(){
+        return{
+            counter:0
+        }
+    };
+    template:'<d
+})

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Conversor De Masas</title>
+        <script src="app.js"></script>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    </head>
+    <body>
+        <!-- Titulo -->
+        <center>
+          <font face="Cooper Std Black"> <h2 style=>Conversor de Masas</font></h2>
+          <font face="Berlin Sans FB">Ingrese el valor en libras:</font>
+        </center>
+            <center> 
+            <!-- Acá ingresaremos los datos en libras-->
+            </center>
+        <div class="form-group">
+          <label for="oamount"></label>
+          <input 
+            type="number"
+            class="form-control searchBox"
+            placeholder="0.00"
+            id="Libras"
+            oninput="ConversorDeMasas(this.value)" 
+            onchange="ConversorDeMasas(this.value)"/>
+        </div>
+        <!-- Unidades a convertir-->
+      
+   <center>
+    <font face="Berlin Sans FB"><p>Quintal: <span id="Quintal"</span></font></p>
+    <font face="Berlin Sans FB"><p>Arroba: <span id="Arroba"</span></font></p>
+    <font face="Berlin Sans FB"><p>Kilogramo≈: <span id="Kilogramo"</span></font></p>
+    <font face="Berlin Sans FB"><p>Onzas: <span id="Onzas"</span></font></p>
+    <font face="Berlin Sans FB"><p>Gramos: <span id="Gramos"</span></font></p>
+    <font face="Berlin Sans FB"><p>Miligramos: <span id="Miligramos"</span> </font></p>
+    </center>
+        <script>
+     //Funciones para obtener resultados
+            function ConversorDeMasas(value) {
+                document.getElementById("Quintal").innerHTML =
+                  value * 0.01;
+                  document.getElementById("Arroba").innerHTML =
+                  value * 0.04;
+                document.getElementById("Kilogramo").innerHTML =
+                  value * 0.453592;
+                document.getElementById("Onzas").innerHTML =
+                  value * 16;
+                document.getElementById("Gramos").innerHTML =
+                  value * 453.592;
+                document.getElementById("Miligramos").innerHTML =
+                  value * 453592.37;
+            }
+        </script>
+    </body>
+</html>
